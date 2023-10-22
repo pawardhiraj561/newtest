@@ -9,7 +9,7 @@ pipeline {
             }
         }
         
-        stage('Build') {
+        stage('Build_pro') {
             steps {
                 // Build your application (e.g., compile code, run tests)
                 sh 'mvn clean package'
