@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Add your build steps here
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Add your test steps here
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Deployment successful!'
+            // Add steps for success condition, if needed
+        }
+        failure {
+            echo 'Deployment failed.'
+            // Add steps for failure condition, if needed
+        }
+    }
+}
